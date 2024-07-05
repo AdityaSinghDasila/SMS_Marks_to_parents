@@ -54,7 +54,7 @@ app.use(passport.session());
 // const __dirname=dirname(fileURLToPath(import.meta.url));
 
 //twilio:-
-async function sms(sender,reciever,e,h,m,s){
+async function sms(sender,reciever,e,h,m,s,i,resulti){
     console.log("twilio function has been called!");
     const reportStatus= await client.messages.create({
         body:`marks E:${e} H:${h} M:${m} S:${s}`,
@@ -62,6 +62,16 @@ async function sms(sender,reciever,e,h,m,s){
         from:sender,
     });
     console.log("Yes"); 
+    try{
+            let qry="UPDATE result SET sent = true WHERE id = $1";
+            const dbResult= await db.query(qry,[resulti.id]);
+            if(dbResult){
+                console.log("sms send and db updated for : "+resulti.name);
+                return i;
+            }
+    }catch(error){
+        console.log(error.message);
+    }
 }
 
 
@@ -75,13 +85,16 @@ app.get("/twl",async (req,res)=>{
                 while(i<result.rows.length){
                     let sender=process.env.SENDERPHN;
                     let reciever="+91"+result.rows[i].phn;
-                    sms(sender,reciever,result.rows[i].english,result.rows[i].hindi,result.rows[i].maths,result.rows[i].science);
+                    let student = await sms(sender,reciever,result.rows[i].english,result.rows[i].hindi,result.rows[i].maths,result.rows[i].science,i,result.rows[i]);
+                    if(student)
+                        console.log(student+"✔");
                     i++;
                     // console.log(result.rows[i]);
                     // i++;
                 }
                 
             }
+            res.redirect("/sms");
         }catch(err){
             console.log(err.message);
         }
