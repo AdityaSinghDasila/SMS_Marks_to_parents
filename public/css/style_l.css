@@ -1,0 +1,60 @@
+body{
+    background-color:  whitesmoke ;
+}
+.form_1{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+}
+.form_container{
+    opacity: 85%;
+    background-color:whitesmoke;
+    padding: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10%;
+}
+.submit{
+    background-color:#007BFF ;
+    color:white;
+    border-radius: 10%;
+    border:none;
+    padding: 10px;
+    opacity: 100%;
+}
+.outer_container{
+    background-image: url("../images/login_bg.jpg");
+    background-size: contain;    
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 2%;
+}
+header{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    color:black;
+}
+footer{
+    margin-bottom: 10px;
+    padding-top: 2%;
+}
+.marq{
+    margin-top:0px;
+}
+
+
+/* font css below use weight 300-700*/
+.teko-header {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.teko-form {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }

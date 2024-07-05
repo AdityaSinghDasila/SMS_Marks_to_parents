@@ -1,0 +1,63 @@
+body{
+    background-color: lightgray;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.outer_container{
+    border-radius: 3%;
+    min-height: 90vh; 
+    background-image: url(../images/smsPage_bg2.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:whitesmoke;
+}
+.rowi{
+    display:flex;
+    gap:45px;
+    justify-content: space-between;
+}
+
+table td,th{
+    border:0.5px solid lightgray;
+    min-width: 100px;
+    padding:10px;
+}
+table{
+    margin:30px;
+}
+.btndiv{
+    margin:40px;
+    display:flex;
+    justify-content: center;
+}
+
+.smsbt{
+  position:relative;
+  color:white;
+  background-color:#007BFF ;
+  border:0px;
+  border-radius: 10%;
+  padding: 15px;
+  margin:2rem;
+  transition:0.1s;
+}
+.smsbt:hover{
+    letter-spacing: 0.3em;
+}
+.backbt{
+  position:relative;  
+  background-color: #DEE2E6;
+  border:0px;
+  border-radius: 10%;
+  padding: 15px;
+  margin:2rem;
+  transition: 0.1s;
+}
+.backbt:hover{
+    letter-spacing: 0.3em;
+}

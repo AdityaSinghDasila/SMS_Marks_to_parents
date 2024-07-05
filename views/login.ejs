@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_l.css">
+    <!-- font: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_h1 teko-header">
+            <h1>GRAPHIC ERA SCHOOL</h1>
+        </div>
+    </header>
+    <p class="marq"><marquee class="teko-form">Please contact the Admin if you have not been registered yet</marquee></p>
+    <div class="outer_container">
+        
+        <div class="form_container">
+            <form class="form_1" action="/submit" method="POST">
+                <label><h2 class="teko-form">Teacher Login Portal</h2></label>
+                <div class="form1__id">
+                    <label for="id">Id: </label>
+                    <input type="number" max="9999" min="1000" name="id" id="id" required>
+                </div>
+                <div class="form1__username">
+                    <label for="User">Username: </label>
+                    <input type="text" name="username" id="User">
+                </div>
+                <div class="form1__Password">
+                    <label for="pswd">Password: </label>
+                    <input type="password" name="password" id="pswd">
+                </div>
+                <div class="form1__submit">
+                    <input class="submit" type="submit" value="Sign in">
+                </div>
+                <% if(locals.msg){%>
+                <h6 style="color:red"><%=msg%></h6>
+                <%}%>
+            </form>
+        </div>
+    </div>
+<footer class="teko-header">
+    ADITYA SINGH <br>
+    MINI-PROJECT 24
+</footer>
+</body>
+</html>

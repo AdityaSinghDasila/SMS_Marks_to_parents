@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_s.css">
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>GRAPHIC ERA SCHOOL</h1>
+    </header>
+    <div class="outer_container">
+        <h2>RESULT SMS PORTAL</h2>
+
+        <h3>STUDENT MARKSHEET INFORMATION</h3>
+        <div class="info">
+                                        <!-- no error -->
+                                        <%if(locals.data){
+                                            let i=0;%>
+                                            <table>
+                                                <tr >
+                                                    <th>Student Id</th>
+                                                    <th>NAME</th>
+                                                    <th>ENGLISH</th>
+                                                    <th>HINDI</th>
+                                                    <th>MATHS</th>
+                                                    <th>SCIENCE</th>
+                                                    <th>SMS SENT</th>
+                                                    <th>PARENTS PHONE NO.</th>
+                                                </tr>
+                                                <%while(i<data.rows.length){%>
+                                                     <tr>
+                                                        <td><%=data.rows[i].id%></td>
+                                                        <td><%=data.rows[i].name%></td>
+                                                        <td><%=data.rows[i].english%></td>
+                                                        <td><%=data.rows[i].hindi%></td>
+                                                        <td><%=data.rows[i].maths%></td>
+                                                        <td><%=data.rows[i].science%></td>
+                                                        <td><%=data.rows[i].sent%></td>
+                                                        <td><%=data.rows[i].phn%></td>
+                                                    </tr>
+                                                <%i++;}%>
+                                            </table>
+                                            <%}%>
+
+
+                                           
+                                            <%if(locals.err){%>
+                                                <h5><%=err%></h5>
+                                            <%}%>
+        </div>
+    </div>
+    <div class="btndiv">
+        <button class="smsbt"><a href="/twl">SMS</a></button>    
+        <button class="backbt"><a href="/logout">Logout</a></button>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

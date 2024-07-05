@@ -1,0 +1,81 @@
+body{
+    background-image: url("../images/home\ class\ real.jpg");
+    background-size:contain;
+    color: black;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_container{
+    padding-top:5%;
+    padding-bottom: 5%;
+    border:1px solid navy;
+    background-color: white;
+    z-index: 1;
+    opacity: 90%;
+    border-radius: 2%;
+    margin-left: 25%;
+    margin-right:25%;
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+.subjects{
+    display:flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+.btn{
+  color:white;
+  background-color:#007BFF ;
+  border:0px;
+  border-radius: 10%;
+  padding: 5px;
+  transition:0.1s;
+}
+.btn:hover{
+  letter-spacing: 0.1em;
+}
+.btn-w{
+  background-color: #DEE2E6;
+  border:0px;
+  border-radius: 10%;
+  padding: 5px;
+  transition:0.1s;
+}
+.btn-w:hover{
+  letter-spacing: 0.1em;
+}
+.btn-div{
+  display: flex;
+  gap:5%;
+}
+a{
+  text-decoration: none;
+  color: black ;
+}
+
+/* roboto css below:- */
+
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
